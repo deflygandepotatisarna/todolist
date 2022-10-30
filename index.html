@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project - Suunnitelmalista</title>
+  <link rel="icon" type="image/x-icon" href="icon2.svg">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="app">
+      <h1>TEHTÄVÄLISTA</h1>
+      <form>
+        <input type="text" minlength="5" maxlength="38" placeholder="Lisää tehtävä...">
+        <button type="submit">&plus;</button>
+      </form>
+      <ul>
+        <li>
+            <input type="checkbox" onclick="taskComplete(this)" class="check">
+            <input type="text" value="Harjoittelu" class="task" onfocus="getCurrentTask(this)" onblur="editTask(this)">
+            <i class="fa fa-trash" onclick="removeTask(this)"></i>
+          </li>
+      </ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
+
